@@ -47,7 +47,7 @@
     export default { 
         mounted() { 
             console.log('Component Search is here.') ;
-            this.get_teachers();
+            this.get_levels();
             this.get_class();
         },
         data(){
@@ -65,12 +65,12 @@
         methods: {
             submit: function() {
                 console.log('Component Search is here. button click') 
-                axios.get(`/student/create/`, {
+                axios.get(`/teacher/create/`, {
                     params:{
                         classs:this.classs,
                         first_name:this.first_name,
                         last_name:this.last_name,
-                        teacher:this.teacher,
+                        level:this.level,
                         }
                     })
                 .then((response)=>{
@@ -79,7 +79,7 @@
                         console.log(response)
                         iziToast.success({
                             title: 'OK',
-                            message: 'Successfully Registered Student! Your Student Number is : '+response.data,
+                            message: 'Successfully Registered Teacher! Your Staff Number is : '+response.data,
                             position:'topCenter',
                             timeout: 1000000,
 

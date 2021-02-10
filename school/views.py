@@ -130,16 +130,16 @@ def create_teacher(request):
         data_list.append(classs)
     else:
         return HttpResponse('class cannot be blank',status=500)
-    teacher = request.GET.get('teacher')
-    if teacher != '':
-        teacher = Teacher.objects.get(id =int(teacher))
-        data_list.append(teacher)
+    level = request.GET.get('level')
+    if level != '':
+        level = Level.objects.get(id =int(level))
+        data_list.append(level)
     else:
-        return HttpResponse('Teacher cannot be blank',status=500)
+        return HttpResponse('Level cannot be blank',status=500)
     print(data_list)
     if len(data_list) !=4:
         return HttpResponse('Some fields data missing',status=500)
     else:
-        create_model = model_to_dict(Student.objects.create(first_name=first_name.strip(),last_name=last_name.strip(),classs= classs,teacher=teacher))
-        print(create_model['stud_no'])      # customer_number = 
-        return HttpResponse(create_model['stud_no'],content_type='text/plain',status=200)
+        create_model = model_to_dict(Teacher.objects.create(first_name=first_name.strip(),last_name=last_name.strip(),class_held= classs,level=level))
+        print(create_model['staff_no'])      # customer_number = 
+        return HttpResponse(create_model['staff_no'],content_type='text/plain',status=200)

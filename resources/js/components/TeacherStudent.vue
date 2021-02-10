@@ -35,7 +35,7 @@
                         <td>{{instance.stud_no}}</td>
                         <td>{{instance.first_name}}</td>
                         <td>{{instance.last_name}}</td>
-                        <td>{{instance.classs_name}}</td>
+                        <td>{{instance.classs__name}}</td>
                     </tr>
                 </tbody>
             </table>
