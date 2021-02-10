@@ -2840,6 +2840,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['instances', 'teacher'],
@@ -5817,7 +5818,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-sm-8" }, [
-      _c("h2", [_vm._v("Students "), _c("b", [_vm._v("List")])])
+      _c("h2", [_vm._v("Student With teacher "), _c("b", [_vm._v("List")])])
     ])
   },
   function() {
@@ -6158,6 +6159,8 @@ var render = function() {
       _c("div", { staticClass: "table-wrapper" }, [
         _c("div", { staticClass: "table-title" }, [
           _c("div", { staticClass: "row" }, [
+            _vm._m(0),
+            _vm._v(" "),
             _c("div", { staticClass: "col-sm-8" }, [
               _c("h2", [_vm._v("Staff No:" + _vm._s(_vm.teacher[0].staff_no))])
             ]),
@@ -6225,7 +6228,7 @@ var render = function() {
           "table",
           { staticClass: "table table-striped table-hover table-bordered" },
           [
-            _vm._m(0),
+            _vm._m(1),
             _vm._v(" "),
             _c(
               "tbody",
@@ -6245,12 +6248,20 @@ var render = function() {
           ]
         ),
         _vm._v(" "),
-        _vm._m(1)
+        _vm._m(2)
       ])
     ])
   ])
 }
 var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-sm-8" }, [
+      _c("h2", [_vm._v("Students Per Teacher List")])
+    ])
+  },
   function() {
     var _vm = this
     var _h = _vm.$createElement

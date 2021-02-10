@@ -4,6 +4,7 @@
         <div class="table-wrapper">
             <div class="table-title">
                 <div class="row">
+                    <div class="col-sm-8"><h2>Students Per Teacher List</h2></div>
                     <div class="col-sm-8"><h2>Staff No:{{teacher[0].staff_no}}</h2></div>
                     <div class="col-sm-8"><h2>Staff First name:{{teacher[0].first_name}}</h2></div>
                     <div class="col-sm-8"><h2>Students <b>List For {{teacher[0].first_name}}-{{teacher[0].last_name}}</b></h2></div>
