@@ -6426,7 +6426,10 @@ var render = function() {
                       {
                         staticClass: "view",
                         attrs: {
-                          href: "http://127.0.0.1:8000/" + student.id + "/view",
+                          href:
+                            "https://zetamind.herokuapp.com/" +
+                            student.id +
+                            "/view",
                           title: "View",
                           "data-toggle": "tooltip"
                         }
@@ -6669,7 +6672,7 @@ var render = function() {
                         staticClass: "view",
                         attrs: {
                           href:
-                            "http://127.0.0.1:8000/" +
+                            "https://zetamind.herokuapp.com/" +
                             teacher.id +
                             "/teacher/view",
                           title: "View",

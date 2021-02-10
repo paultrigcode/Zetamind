@@ -32,7 +32,7 @@
                         <td>{{student.last_name}}</td>
                         <td>{{student.classs__name}}</td>
                         <td>
-                        <a :href="'http://127.0.0.1:8000/'+student.id+'/view'" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+                        <a :href="'https://zetamind.herokuapp.com/'+student.id+'/view'" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
                             <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
                             <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
                         </td>
