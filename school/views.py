@@ -43,7 +43,7 @@ def get_students(request):
     if keyword != None:
         lookups= Q(first_name__icontains=keyword) | Q(last_name__icontains=keyword)
         student =list(Student.objects.filter(lookups).values())
-        if teacher == []:
+        if student == []:
         	return HttpResponse('No Student details matches the search first_name and last_name',status=204)
     else:
         student = list(Student.objects.all().values('id','first_name','last_name','teacher__first_name','stud_no','teacher__last_name','teacher__staff_no','classs__name'))

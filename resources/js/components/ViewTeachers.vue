@@ -116,11 +116,11 @@
                 })
                 .then((response)=>{
                     console.log(response)
-                    this.recyclers = response.data;
+                    this.teachers = response.data;
                     if (response.status == 204){
                         iziToast.info({
                         title: 'Empty Search result',
-                        message: "No house Household details matches the search query,phone_number,customer-number,names, and current point",
+                        message: "No Staff details matches the search query,first_name and last_name",
                         position:'topCenter',
                     });     
 

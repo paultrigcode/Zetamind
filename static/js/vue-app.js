@@ -3057,9 +3057,10 @@ __webpack_require__.r(__webpack_exports__);
         _this2.students = response.data;
 
         if (response.status == 204) {
+          console.log(response.data);
           iziToast.info({
             title: 'Empty Search result',
-            message: "No house Household details matches the search query,phone_number,customer-number,names, and current point",
+            message: "No Student details matches the search first_name and last_name",
             position: 'topCenter'
           });
         }
@@ -3213,12 +3214,12 @@ __webpack_require__.r(__webpack_exports__);
         }
       }).then(function (response) {
         console.log(response);
-        _this2.recyclers = response.data;
+        _this2.teachers = response.data;
 
         if (response.status == 204) {
           iziToast.info({
             title: 'Empty Search result',
-            message: "No house Household details matches the search query,phone_number,customer-number,names, and current point",
+            message: "No Staff details matches the search query,first_name and last_name",
             position: 'topCenter'
           });
         }

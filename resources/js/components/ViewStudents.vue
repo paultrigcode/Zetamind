@@ -116,9 +116,10 @@
                     console.log(response)
                     this.students = response.data;
                     if (response.status == 204){
+                        console.log(response.data)
                         iziToast.info({
                         title: 'Empty Search result',
-                        message: "No house Household details matches the search query,phone_number,customer-number,names, and current point",
+                        message: "No Student details matches the search first_name and last_name",
                         position:'topCenter',
                     });     
 
