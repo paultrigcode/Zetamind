@@ -2536,10 +2536,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['instance'],
@@ -5750,48 +5746,7 @@ var render = function() {
   return _c("div", { staticClass: "container-xl" }, [
     _c("div", { staticClass: "table-responsive" }, [
       _c("div", { staticClass: "table-wrapper" }, [
-        _c("div", { staticClass: "table-title" }, [
-          _c("div", { staticClass: "row" }, [
-            _vm._m(0),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-sm-4" }, [
-              _c("div", { staticClass: "search-box" }, [
-                _c("i", { staticClass: "material-icons" }, [_vm._v("")]),
-                _vm._v(" "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.keyword,
-                      expression: "keyword"
-                    }
-                  ],
-                  staticClass: "form-control",
-                  attrs: { type: "text", placeholder: "Search Teacher;" },
-                  domProps: { value: _vm.keyword },
-                  on: {
-                    keyup: function($event) {
-                      if (
-                        !$event.type.indexOf("key") &&
-                        _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
-                      ) {
-                        return null
-                      }
-                      return _vm.Recyclersearch($event)
-                    },
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.keyword = $event.target.value
-                    }
-                  }
-                })
-              ])
-            ])
-          ])
-        ]),
+        _vm._m(0),
         _vm._v(" "),
         _c(
           "table",
@@ -5829,8 +5784,14 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-sm-8" }, [
-      _c("h2", [_vm._v("Student With teacher "), _c("b", [_vm._v("List")])])
+    return _c("div", { staticClass: "table-title" }, [
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-sm-8" }, [
+          _c("h2", [_vm._v("Student With teacher "), _c("b", [_vm._v("List")])])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-sm-4" })
+      ])
     ])
   },
   function() {
@@ -6400,7 +6361,7 @@ var render = function() {
                     }
                   ],
                   staticClass: "form-control",
-                  attrs: { type: "text", placeholder: "Search Teacher;" },
+                  attrs: { type: "text", placeholder: "Search Student;" },
                   domProps: { value: _vm.keyword },
                   on: {
                     keyup: function($event) {

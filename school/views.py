@@ -31,8 +31,8 @@ def get_teachers(request):
     if keyword != None:
         lookups= Q(first_name__icontains=keyword) | Q(last_name__icontains=keyword)
         teacher =list(Teacher.objects.filter(lookups).values())
-        if recycler == []:
-        	return HttpResponse('No house Household details matches the search query,phone_number,customer-number,names, and current point',status=204)
+        if teacher == []:
+        	return HttpResponse('No Staff details matches the search query,first_name and last_name',status=204)
     else:
         teacher = list(Teacher.objects.all().values('id','level__name','first_name','last_name','class_held__name','staff_no'))
     return JsonResponse(teacher,safe=False)
@@ -43,8 +43,8 @@ def get_students(request):
     if keyword != None:
         lookups= Q(first_name__icontains=keyword) | Q(last_name__icontains=keyword)
         student =list(Student.objects.filter(lookups).values())
-        if recycler == []:
-        	return HttpResponse('No house Household details matches the search query,phone_number,customer-number,names, and current point',status=204)
+        if teacher == []:
+        	return HttpResponse('No Student details matches the search first_name and last_name',status=204)
     else:
         student = list(Student.objects.all().values('id','first_name','last_name','teacher__first_name','stud_no','teacher__last_name','teacher__staff_no','classs__name'))
     return JsonResponse(student,safe=False)

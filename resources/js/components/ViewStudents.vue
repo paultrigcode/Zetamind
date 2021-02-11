@@ -8,7 +8,7 @@
                     <div class="col-sm-4">
                         <div class="search-box">
                             <i class="material-icons">&#xE8B6;</i>
-                            <input v-on:keyup.enter="Recyclersearch" type="text" v-model="keyword" class="form-control" placeholder="Search Teacher;">
+                            <input v-on:keyup.enter="Recyclersearch" type="text" v-model="keyword" class="form-control" placeholder="Search Student;">
                         </div>
                     </div>
                 </div>
