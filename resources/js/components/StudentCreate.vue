@@ -21,7 +21,7 @@
                                         <div class="form-group">
                                             <select class="tw-ml-4" v-model="teacher">
                                                 <option value="all">Assign class teacher</option>
-                                                <option v-for="d in teachers" :value="d.id">{{ d.first_name }}</option>
+                                                <option v-for="d in teachers" :value="d.id">{{ d.first_name }} - {{d.last_name}} -{{d.class_held__name}}</option>
                                              </select>
                                         </div>
                                         <div class="form-group">
@@ -81,7 +81,10 @@
                             title: 'OK',
                             message: 'Successfully Registered Student! Your Student Number is : '+response.data,
                             position:'topCenter',
-                            timeout: 1000000,
+                            timeout: 10000,
+                             onClosed: function () {
+                                window.location.href = '/student/create/view/'
+                            }
 
                         });
                     }

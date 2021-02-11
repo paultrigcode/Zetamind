@@ -2410,7 +2410,10 @@ __webpack_require__.r(__webpack_exports__);
             title: 'OK',
             message: 'Successfully Registered Student! Your Student Number is : ' + response.data,
             position: 'topCenter',
-            timeout: 1000000
+            timeout: 10000,
+            onClosed: function onClosed() {
+              window.location.href = '/student/create/view/';
+            }
           });
         }
       })["catch"](function (error) {
@@ -2716,7 +2719,10 @@ __webpack_require__.r(__webpack_exports__);
             title: 'OK',
             message: 'Successfully Registered Teacher! Your Staff Number is : ' + response.data,
             position: 'topCenter',
-            timeout: 1000000
+            timeout: 10000,
+            onClosed: function onClosed() {
+              window.location.href = '/teacher/create/view/';
+            }
           });
         }
       })["catch"](function (error) {
@@ -5629,7 +5635,13 @@ var render = function() {
                       _vm._v(" "),
                       _vm._l(_vm.teachers, function(d) {
                         return _c("option", { domProps: { value: d.id } }, [
-                          _vm._v(_vm._s(d.first_name))
+                          _vm._v(
+                            _vm._s(d.first_name) +
+                              " - " +
+                              _vm._s(d.last_name) +
+                              " -" +
+                              _vm._s(d.class_held__name)
+                          )
                         ])
                       })
                     ],
@@ -20058,8 +20070,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/paultrigcode/Desktop/Zetamind/existing-django/boilertemplate/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/paultrigcode/Desktop/Zetamind/existing-django/boilertemplate/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/paultrigcode/Desktop/Projects/Zetamind/existing-django/boilertemplate/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/paultrigcode/Desktop/Projects/Zetamind/existing-django/boilertemplate/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

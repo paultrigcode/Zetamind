@@ -81,7 +81,10 @@
                             title: 'OK',
                             message: 'Successfully Registered Teacher! Your Staff Number is : '+response.data,
                             position:'topCenter',
-                            timeout: 1000000,
+                            timeout: 10000,
+                            onClosed: function () {
+                                window.location.href = '/teacher/create/view/'
+                            }
 
                         });
                     }

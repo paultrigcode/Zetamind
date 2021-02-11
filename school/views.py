@@ -70,7 +70,7 @@ def student_per_teacher_view(request,id):
     return render(request, 'student_per_teacher_view.html',{'instances':instance,'teacher':teacher})
 
 def teachers(request):
-    teachers=Teacher.objects.all().values()
+    teachers=Teacher.objects.all().values('id','first_name','last_name','class_held__name','class_held')
     return JsonResponse(list(teachers),safe=False)
 
 def classs(request):
