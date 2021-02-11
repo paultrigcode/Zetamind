@@ -84,10 +84,21 @@ WSGI_APPLICATION = 'boilertemplate.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.prod.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.prod.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd8oj4bluifk7n5',
+        'USER': 'ivqfgcveohhgkj',
+        'PASSWORD': '59200aa42fd93fa70acdd6841e9b5fa1603073f5dc47b0030fc78b31c0d8a33f',
+        'HOST': 'ec2-100-24-139-146.compute-1.amazonaws.com',
+        'PORT': '5432'
     }
 }
 
